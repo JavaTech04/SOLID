@@ -150,8 +150,42 @@ public class Triangle implements Shape {
 }
 ```
 
-<b>3. Liskov Substitution Principle (LSP)</b>
+**3. Liskov Substitution Principle (LSP)**
+<mark>Pass</mark>
 
-<b>4. Interface Segregation Principle (ISP)</b>
+**4. Interface Segregation Principle (ISP)**
+<mark>Clients should not be forced to depend on interfaces they do not use.</mark>
+*ISP Violation: A single interface that includes methods unrelated to all implementing classes.*
+```java
+public interface Worker {
+    void work();
+    void eat();
+}
+
+public class HumanWorker implements Worker {
+    @Override
+    public void work() {
+        // Human worker working
+    }
+
+    @Override
+    public void eat() {
+        // Human worker eating
+    }
+}
+
+public class RobotWorker implements Worker {
+    @Override
+    public void work() {
+        // Robot working
+    }
+
+    @Override
+    public void eat() {
+        // Robots don't eat, but still have to implement this method
+    }
+}
+
+```
 
 <b>5. Dependency Inversion Principle (DIP)</b>
