@@ -21,7 +21,7 @@ public class Employee {
         return position;
     }
 }
-
+```
 
 <i>SRP Compliance: Separate payroll work into a separate layer.</i>
 ```
