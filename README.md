@@ -78,7 +78,7 @@ public class AreaCalculator {
     }
 }
 ```
-Problem: <span>If you want to add a new shape, say Triangle, you must change the calculateArea method in the AreaCalculator class, which violates OCP because the class is not "closed" for editing.</span> <br/>
+Problem: <span>If you want to add a new shape, say Triangle, you must change the calculateArea method in the AreaCalculator class, which violates OCP because the class is not "closed" for editing.</span> <hr/>
 *OCP Compliance: To adhere to the OCP rule, you can separate the logic into separate classes, using a Shape interface that all shapes will implement.*
 ```java
 // Shape.java
