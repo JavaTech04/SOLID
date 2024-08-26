@@ -24,7 +24,7 @@ public class Employee {
 ```
 
 <i>SRP Compliance: Separate payroll work into a separate layer.</i>
-```
+```java
 // Employee.java
 public class Employee {
     private String name;
