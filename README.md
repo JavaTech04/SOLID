@@ -151,9 +151,13 @@ public class Triangle implements Shape {
 ```
 
 
+**3. Liskov Substitution Principle (LSP)**
+```java
+
+```
 
 **4. Interface Segregation Principle (ISP)**
-<mark>Clients should not be forced to depend on interfaces they do not use.</mark> <br/>
+<br/><mark>Clients should not be forced to depend on interfaces they do not use.</mark> <br/>
 *ISP Violation: A single interface that includes methods unrelated to all implementing classes.*
 ```java
 // Worker.java
