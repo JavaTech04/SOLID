@@ -24,6 +24,7 @@ public class Employee {
 
 <i>SRP Compliance: Separate payroll work into a separate layer.</i>
 ```
+// Employee.java
 public class Employee {
     private String name;
     private String position;
@@ -37,6 +38,7 @@ public class Employee {
     }
 }
 
+// Payroll.java
 public class Payroll {
     public void calculatePay(Employee employee) {
         // Logic...
@@ -44,9 +46,37 @@ public class Payroll {
 }
 ```
 
-<b>2. Open/Closed Principle (OCP)</b>
+<b>2. Open/Closed Principle (OCP)</b> <br/>
 <mark>An existing class cannot be modified but can be extended by inheritance.</mark> <br/>
 <i>OCP Violation: Suppose you have an <b>AreaCalculator</b> class to calculate the area of ​​different shapes like rectangles and circles.</i>
+```
+// Rectangle.java
+public class Rectangle {
+    public double length;
+    public double width;
+}
+
+// Circle.java
+public class Circle {
+    public double radius;
+}
+
+// AreaCalculator.java
+public class AreaCalculator {
+    public double calculateArea(Object shape) {
+        double area = 0;
+        if (shape instanceof Rectangle) {
+            Rectangle rectangle = (Rectangle) shape;
+            area = rectangle.length * rectangle.width;
+        } else if (shape instanceof Circle) {
+            Circle circle = (Circle) shape;
+            area = Math.PI * circle.radius * circle.radius;
+        }
+        return area;
+    }
+}
+```
+<p>Problem: If you want to add a new shape, say Triangle, you must change the calculateArea method in the AreaCalculator class, which violates OCP because the class is not "closed" for editing.</p>
 
 <b>3. Liskov Substitution Principle (LSP)</b>
 
