@@ -78,6 +78,55 @@ public class AreaCalculator {
 ```
 <li><b>Problem:</b> <i>If you want to add a new shape, say Triangle, you must change the <b>calculateArea</b> method in the <b>AreaCalculator</b> class, which violates OCP because the class is not "closed" for editing.</i></li>
 
+<i>OCP Compliance: To contribute to OCP rule routines, you can separate the logic features into separate classes, using a Shape interface that all shapes will implement.</i>
+```
+// Shape.java
+public interface Shape {
+    double calculateArea();
+}
+
+// Rectangle.java
+public class Rectangle implements Shape {
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    public double calculateArea() {
+        return length * width;
+    }
+}
+
+// Circle.java
+public class Circle implements Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+// AreaCalculator.java
+public class AreaCalculator {
+    public double calculateTotalArea(List<Shape> shapes) {
+        double totalArea = 0;
+        for (Shape shape : shapes) {
+            totalArea += shape.calculateArea();
+        }
+        return totalArea;
+    }
+}
+```
+
 <b>3. Liskov Substitution Principle (LSP)</b>
 
 <b>4. Interface Segregation Principle (ISP)</b>
