@@ -192,4 +192,37 @@ public class RobotWorker implements Worker {
 }
 ```
 
+*ISP Compliance: Split the interface into multiple smaller, more specific interfaces.*
+```java
+// Workable.java
+public interface Workable {
+    void work();
+}
+
+// Eatable.java
+public interface Eatable {
+    void eat();
+}
+
+// HumanWorker.java
+public class HumanWorker implements Workable, Eatable {
+    @Override
+    public void work() {
+        // Human worker working
+    }
+
+    @Override
+    public void eat() {
+        // Human worker eating
+    }
+}
+
+// RobotWorker.java
+public class RobotWorker implements Workable {
+    @Override
+    public void work() {
+        // Robot working
+    }
+}
+```
 <b>5. Dependency Inversion Principle (DIP)</b>
