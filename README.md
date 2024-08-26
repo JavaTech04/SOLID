@@ -156,14 +156,16 @@ public class Triangle implements Shape {
 ```
 
 **4. Interface Segregation Principle (ISP)**
-<mark>Clients should not be forced to depend on interfaces they do not use.</mark>
+<mark>Clients should not be forced to depend on interfaces they do not use.</mark> <br/>
 *ISP Violation: A single interface that includes methods unrelated to all implementing classes.*
 ```java
+// Worker.java
 public interface Worker {
     void work();
     void eat();
 }
 
+// HumanWorker.java
 public class HumanWorker implements Worker {
     @Override
     public void work() {
@@ -176,6 +178,7 @@ public class HumanWorker implements Worker {
     }
 }
 
+// RobotWorker.java
 public class RobotWorker implements Worker {
     @Override
     public void work() {
@@ -187,7 +190,6 @@ public class RobotWorker implements Worker {
         // Robots don't eat, but still have to implement this method
     }
 }
-
 ```
 
 <b>5. Dependency Inversion Principle (DIP)</b>
