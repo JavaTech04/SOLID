@@ -47,10 +47,11 @@ public class Payroll {
 }
 ```
 
-<b>2. Open/Closed Principle (OCP)</b> <br/>
-<mark>An existing class cannot be modified but can be extended by inheritance.</mark> <br/>
-<i>OCP Violation: Suppose you have an <b>AreaCalculator</b> class to calculate the area of ​​different shapes like rectangles and circles.</i>
-```
+**2. Open/Closed Principle (OCP)**  
+<mark>An existing class cannot be modified but can be extended by inheritance.</mark>  
+*OCP Violation: Suppose you have an **AreaCalculator** class to calculate the area of different shapes like rectangles and circles.*
+
+```java
 // Rectangle.java
 public class Rectangle {
     public double length;
@@ -77,10 +78,9 @@ public class AreaCalculator {
     }
 }
 ```
-<li><b>Problem:</b> <span>If you want to add a new shape, say Triangle, you must change the <b>calculateArea</b> method in the <b>AreaCalculator</b> class, which violates OCP because the class is not "closed" for editing.</span></li> <hr/>
-
-<i>OCP Compliance: To contribute to OCP rule routines, you can separate the logic features into separate classes, using a Shape interface that all shapes will implement.</i>
-```
+Problem: <span>If you want to add a new shape, say Triangle, you must change the calculateArea method in the AreaCalculator class, which violates OCP because the class is not "closed" for editing.</span>
+OCP Compliance: To adhere to the OCP rule, you can separate the logic into separate classes, using a Shape interface that all shapes will implement.
+```java
 // Shape.java
 public interface Shape {
     double calculateArea();
@@ -126,7 +126,9 @@ public class AreaCalculator {
         return totalArea;
     }
 }
+
 ```
+
 ## Benefits of the Open/Closed Principle (OCP)
 
 ### Open for Extension
