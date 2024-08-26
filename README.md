@@ -150,10 +150,12 @@ public class Triangle implements Shape {
 }
 ```
 
+
 **3. Liskov Substitution Principle (LSP)**
 ```java
 
 ```
+
 
 **4. Interface Segregation Principle (ISP)**
 <mark>Clients should not be forced to depend on interfaces they do not use.</mark> <br/>
@@ -225,4 +227,5 @@ public class RobotWorker implements Workable {
     }
 }
 ```
-<b>5. Dependency Inversion Principle (DIP)</b>
+**5. Dependency Inversion Principle (DIP)**
+<mark>High-level modules should not depend on low-level modules. Both should depend on abstractions.</mark>
