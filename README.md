@@ -76,7 +76,7 @@ public class AreaCalculator {
     }
 }
 ```
-<li><b>Problem:</b> If you want to add a new shape, say Triangle, you must change the <b>calculateArea</b> method in the <b>AreaCalculator</b> class, which violates OCP because the class is not "closed" for editing.</li>
+<li><b>Problem:</b> <i>If you want to add a new shape, say Triangle, you must change the <b>calculateArea</b> method in the <b>AreaCalculator</b> class, which violates OCP because the class is not "closed" for editing.</i></li>
 
 <b>3. Liskov Substitution Principle (LSP)</b>
 
