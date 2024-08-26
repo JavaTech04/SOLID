@@ -152,8 +152,71 @@ public class Triangle implements Shape {
 
 
 **3. Liskov Substitution Principle (LSP)**
+<br> <mark>Objects in a program can be replaced by exposing their subclasses without changing the correctness of the program.</mark>
+*LSP Violation: The Square class cannot properly replace the Rectangle class.*
 ```java
+// Rectangle.java
+public class Rectangle {
+    protected int width;
+    protected int height;
 
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getArea() {
+        return width * height;
+    }
+}
+
+// Square.java
+public class Square extends Rectangle {
+    @Override
+    public void setWidth(int width) {
+        this.width = width; // *invalid
+        this.height = width; // *invalid
+    }
+
+    @Override
+    public void setHeight(int height) {
+        this.height = height; // *invalid
+        this.width = height; // *invalid
+    }
+}
+```
+*LSP compliance: Split the Square class into a separate class, not inheriting from Rectangle.*
+```java
+// Rectangle.java
+public class Rectangle {
+    protected int width;
+    protected int height;
+
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    public int getArea() {
+        return width * height;
+    }
+}
+
+// Square.java
+public class Square {
+    private int side;
+
+    public Square(int side) {
+        this.side = side;
+    }
+
+    public int getArea() {
+        return side * side;
+    }
+}
 ```
 
 **4. Interface Segregation Principle (ISP)**
