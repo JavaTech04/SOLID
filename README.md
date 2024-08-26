@@ -1,6 +1,6 @@
 # SOLID: The First 5 Principles of Object-Oriented Design
 
-<b>1. Single Responsibility Principle (SRP)</b> <br/>
+<b>1. Single Responsibility Principle (SRP)</b>
 <li> Each class should only have one responsibility.</li>
 
 <b>2. Open/Closed Principle (OCP)</b>
