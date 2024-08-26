@@ -2,6 +2,7 @@
 
 <b>1. Single Responsibility Principle (SRP)</b>
 <li> Each class should only have one responsibility.</li>
+<li>SRP Violation: This class is responsible for managing employee information and calculating salaries.</li>
 
 <b>2. Open/Closed Principle (OCP)</b>
 
