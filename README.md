@@ -45,6 +45,8 @@ public class Payroll {
 ```
 
 <b>2. Open/Closed Principle (OCP)</b>
+<mark>An existing class cannot be modified but can be extended by inheritance.</mark> <br/>
+<i>OCP Violation: Suppose you have an <b>AreaCalculator</b> class to calculate the area of ​​different shapes like rectangles and circles.</i>
 
 <b>3. Liskov Substitution Principle (LSP)</b>
 
