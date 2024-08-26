@@ -1,9 +1,10 @@
 # SOLID: The First 5 Principles of Object-Oriented Design
 
-<b>1. Single Responsibility Principle (SRP)</b> <br/>
-<mark> Each class should only have one responsibility.</mark> <br/>
-<i>SRP Violation: This class is responsible for managing employee information and calculating salaries.</i>
-```
+**1. Single Responsibility Principle (SRP)**  
+<mark>Each class should only have one responsibility.</mark>  
+*SRP Violation: This class is responsible for managing employee information and calculating salaries.*
+
+```java
 public class Employee {
     private String name;
     private String position;
@@ -20,7 +21,7 @@ public class Employee {
         return position;
     }
 }
-```
+
 
 <i>SRP Compliance: Separate payroll work into a separate layer.</i>
 ```
