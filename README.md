@@ -229,3 +229,61 @@ public class RobotWorker implements Workable {
 ```
 **5. Dependency Inversion Principle (DIP)**
 <mark>High-level modules should not depend on low-level modules. Both should depend on abstractions.</mark>
+*DIP Violation: High-level module directly depends on a low-level module*
+```java
+public class LightBulb {
+    public void turnOn() {
+        // Logic to turn on the light bulb
+    }
+
+    public void turnOff() {
+        // Logic to turn off the light bulb
+    }
+}
+
+public class Switch {
+    private LightBulb bulb;
+
+    public Switch(LightBulb bulb) {
+        this.bulb = bulb;
+    }
+
+    public void operate() {
+        // Logic to operate the switch
+        bulb.turnOn(); // Direct dependency on LightBulb
+    }
+}
+```
+
+*DIP Compliance: Depend on abstractions rather than concrete implementations.*
+```java
+public interface Switchable {
+    void turnOn();
+    void turnOff();
+}
+
+public class LightBulb implements Switchable {
+    @Override
+    public void turnOn() {
+        // Logic to turn on the light bulb
+    }
+
+    @Override
+    public void turnOff() {
+        // Logic to turn off the light bulb
+    }
+}
+
+public class Switch {
+    private Switchable device;
+
+    public Switch(Switchable device) {
+        this.device = device;
+    }
+
+    public void operate() {
+        // Logic to operate the switch
+        device.turnOn(); // Depend on abstraction
+    }
+}
+```
