@@ -49,7 +49,7 @@ public class Payroll {
 
 **2. Open/Closed Principle (OCP)**  
 <mark>An existing class cannot be modified but can be extended by inheritance.</mark>  
-*OCP Violation: Suppose you have an **AreaCalculator** class to calculate the area of different shapes like rectangles and circles.*
+*OCP Violation: Suppose you have an `AreaCalculator` class to calculate the area of different shapes like rectangles and circles.*
 
 ```java
 // Rectangle.java
@@ -78,7 +78,7 @@ public class AreaCalculator {
     }
 }
 ```
-Problem: <span>If you want to add a new shape, say Triangle, you must change the calculateArea method in the AreaCalculator class, which violates OCP because the class is not "closed" for editing.</span> <hr/>
+Problem: <span>If you want to add a new `shape`, say `Triangle`, you must change the `calculateArea` method in the `AreaCalculato`r class, which violates OCP because the class is not "closed" for editing.</span> <hr/>
 *OCP Compliance: To adhere to the OCP rule, you can separate the logic into separate classes, using a Shape interface that all shapes will implement.*
 ```java
 // Shape.java
