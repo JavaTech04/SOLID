@@ -9,7 +9,7 @@ public class Employee {
     private String position;
     
     public void calculatePay() {
-        // Logic tính lương
+        // Logic...
     }
     
     public String getName() {
