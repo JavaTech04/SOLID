@@ -146,6 +146,7 @@ public class Triangle implements Shape {
         return 0.5 * base * height;
     }
 }
+```
 
 <b>3. Liskov Substitution Principle (LSP)</b>
 
