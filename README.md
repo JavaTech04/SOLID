@@ -2,7 +2,7 @@
 
 <b>1. Single Responsibility Principle (SRP)</b> <br/>
 <mark> Each class should only have one responsibility.</mark> <br/>
-<i style="color: red;">SRP Violation: This class is responsible for managing employee information and calculating salaries.</i>
+<i>SRP Violation: This class is responsible for managing employee information and calculating salaries.</i>
 ```
 public class Employee {
     private String name;
@@ -18,6 +18,28 @@ public class Employee {
     
     public String getPosition() {
         return position;
+    }
+}
+```
+
+<i>SRP Compliance: Separate payroll work into a separate layer.</i>
+```
+public class Employee {
+    private String name;
+    private String position;
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+}
+
+public class Payroll {
+    public void calculatePay(Employee employee) {
+        // Logic...
     }
 }
 ```
