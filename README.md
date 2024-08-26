@@ -126,6 +126,26 @@ public class AreaCalculator {
     }
 }
 ```
+## Benefits of the Open/Closed Principle (OCP)
+
+### Open for Extension
+Now, if you want to add a new shape, such as a `Triangle`, you only need to create a new `Triangle` class and implement the `Shape` interface, without changing any existing source code.
+
+```java
+public class Triangle implements Shape {
+    private double base;
+    private double height;
+
+    public Triangle(double base, double height) {
+        this.base = base;
+        this.height = height;
+    }
+
+    @Override
+    public double calculateArea() {
+        return 0.5 * base * height;
+    }
+}
 
 <b>3. Liskov Substitution Principle (LSP)</b>
 
