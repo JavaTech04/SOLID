@@ -76,7 +76,7 @@ public class AreaCalculator {
     }
 }
 ```
-<li><b>Problem:</b> <i>If you want to add a new shape, say Triangle, you must change the <b>calculateArea</b> method in the <b>AreaCalculator</b> class, which violates OCP because the class is not "closed" for editing.</i></li>
+<li><b>Problem:</b> <span>If you want to add a new shape, say Triangle, you must change the <b>calculateArea</b> method in the <b>AreaCalculator</b> class, which violates OCP because the class is not "closed" for editing.</span></li> <hr/>
 
 <i>OCP Compliance: To contribute to OCP rule routines, you can separate the logic features into separate classes, using a Shape interface that all shapes will implement.</i>
 ```
