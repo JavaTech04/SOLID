@@ -129,7 +129,7 @@ public class AreaCalculator {
 
 ```
 
-## Benefits of the Open/Closed Principle (OCP)
+<p>Benefits of the Open/Closed Principle (OCP) </p>
 
 ### Open for Extension
 Now, if you want to add a new shape, such as a `Triangle`, you only need to create a new `Triangle` class and implement the `Shape` interface, without changing any existing source code.
